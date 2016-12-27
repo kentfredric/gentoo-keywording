@@ -1,0 +1,14 @@
+export BUG=600066
+#export AUTOFIX=1
+export UPTO=dev
+SOURCE=(
+  dev-perl/PDF-Create/PDF-Create-1.290.0.ebuild
+)
+PACKAGES=(
+  dev-perl/PDF-Create/PDF-Create-1.400.0.ebuild
+    dev-perl/File-Share/File-Share-0.250.0.ebuild
+      dev-perl/File-ShareDir/File-ShareDir-1.102.0.ebuild
+    dev-perl/File-ShareDir-Install/File-ShareDir-Install-0.110.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
