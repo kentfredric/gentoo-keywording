@@ -1,0 +1,10 @@
+export BUG=599962
+#export AUTOFIX=1
+export UPTO=dev
+SOURCE=dev-perl/Log-Dispatch/Log-Dispatch-2.540.0.ebuild
+PACKAGES=(
+  dev-perl/Log-Dispatch/Log-Dispatch-2.580.0.ebuild
+  dev-perl/Test-Needs/Test-Needs-0.2.2.ebuild
+)
+perl missing_keywords.pl "${SOURCE}" "${PACKAGES[@]}"
+
