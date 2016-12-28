@@ -1,0 +1,13 @@
+export BUG=588382
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/AnyEvent/AnyEvent-7.80.0.ebuild
+)
+PACKAGES=(
+  dev-perl/AnyEvent/AnyEvent-7.120.0.ebuild
+  dev-perl/Canary-Stability/Canary-Stability-2006.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
