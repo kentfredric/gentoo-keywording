@@ -1,0 +1,12 @@
+export BUG=588024
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/Tie-Cache/Tie-Cache-0.190.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Tie-Cache/Tie-Cache-0.210.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
