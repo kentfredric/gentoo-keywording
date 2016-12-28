@@ -1,0 +1,12 @@
+export BUG=594276
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/Want/Want-0.210.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Want/Want-0.290.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
