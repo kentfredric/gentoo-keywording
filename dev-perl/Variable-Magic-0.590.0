@@ -1,0 +1,12 @@
+export BUG=594016
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/Variable-Magic/Variable-Magic-0.580.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Variable-Magic/Variable-Magic-0.590.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
