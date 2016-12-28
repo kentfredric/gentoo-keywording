@@ -1,0 +1,12 @@
+export BUG=595582
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/ZMQ-LibZMQ2/ZMQ-LibZMQ2-1.40.0.ebuild
+)
+PACKAGES=(
+  dev-perl/ZMQ-LibZMQ2/ZMQ-LibZMQ2-1.90.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
