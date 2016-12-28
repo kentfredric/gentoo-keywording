@@ -1,0 +1,12 @@
+export BUG=595054
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/XML-Parser/XML-Parser-2.410.0-r2.ebuild
+)
+PACKAGES=(
+  dev-perl/XML-Parser/XML-Parser-2.440.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
