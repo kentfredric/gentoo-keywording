@@ -1,0 +1,12 @@
+export BUG=594278
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/WWW-Curl/WWW-Curl-4.150.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/WWW-Curl/WWW-Curl-4.170.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
