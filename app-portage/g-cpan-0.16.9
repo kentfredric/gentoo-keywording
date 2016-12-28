@@ -1,0 +1,12 @@
+export BUG=594746
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  app-portage/g-cpan/g-cpan-0.16.5.ebuild
+)
+PACKAGES=(
+  app-portage/g-cpan/g-cpan-0.16.9.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
