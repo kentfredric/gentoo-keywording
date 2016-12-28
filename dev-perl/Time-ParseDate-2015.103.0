@@ -1,0 +1,12 @@
+export BUG=588030
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/Time-ParseDate/Time-ParseDate-2011.51.700-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Time-ParseDate/Time-ParseDate-2015.103.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
