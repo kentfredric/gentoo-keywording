@@ -1,0 +1,12 @@
+export BUG=595964
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/DBD-SQLite/DBD-SQLite-1.480.0.ebuild
+)
+PACKAGES=(
+  dev-perl/DBD-SQLite/DBD-SQLite-1.500.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
