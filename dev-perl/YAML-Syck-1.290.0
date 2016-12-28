@@ -1,0 +1,12 @@
+export BUG=595576
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/YAML-Syck/YAML-Syck-1.200.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/YAML-Syck/YAML-Syck-1.290.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
