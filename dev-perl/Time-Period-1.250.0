@@ -1,0 +1,12 @@
+export BUG=588344
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/Time-Period/Time-Period-1.240.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Time-Period/Time-Period-1.250.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
