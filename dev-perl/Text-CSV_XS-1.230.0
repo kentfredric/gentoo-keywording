@@ -1,0 +1,12 @@
+export BUG=585612
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/Text-CSV_XS/Text-CSV_XS-0.950.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Text-CSV_XS/Text-CSV_XS-1.230.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
