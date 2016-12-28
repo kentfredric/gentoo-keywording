@@ -1,0 +1,15 @@
+export BUG=595572
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/YAML/YAML-0.840.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/YAML/YAML-1.150.0.ebuild
+    dev-perl/Test-YAML/Test-YAML-1.60.0.ebuild
+      dev-perl/Test-Base/Test-Base-0.880.0.ebuild
+        dev-perl/Filter/Filter-1.540.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
