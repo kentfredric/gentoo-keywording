@@ -1,0 +1,12 @@
+export BUG=594290
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/Wx/Wx-0.992.700-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Wx/Wx-0.992.800.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
