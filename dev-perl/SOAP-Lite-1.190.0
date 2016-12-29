@@ -1,0 +1,13 @@
+export BUG=581888
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+SOURCE=(
+  dev-perl/SOAP-Lite/SOAP-Lite-1.040.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/SOAP-Lite/SOAP-Lite-1.190.0.ebuild
+    dev-perl/XML-Parser-Lite/XML-Parser-Lite-0.721.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
