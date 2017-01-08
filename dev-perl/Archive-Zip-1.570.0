@@ -1,0 +1,14 @@
+export BUG=569868
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=exp
+SOURCE=(
+  dev-perl/Archive-Zip/Archive-Zip-1.530.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Archive-Zip/Archive-Zip-1.570.0.ebuild
+    dev-perl/Test-MockModule/Test-MockModule-0.110.0.ebuild
+      dev-perl/SUPER/SUPER-1.201.411.170.ebuild
+        dev-perl/Sub-Identify/Sub-Identify-0.120.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
