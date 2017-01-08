@@ -1,0 +1,16 @@
+export BUG=595584
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+SOURCE=(
+  dev-perl/Any-Moose/Any-Moose-0.210.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Any-Moose/Any-Moose-0.260.0-r1.ebuild
+    dev-perl/MooseX-Types/MooseX-Types-0.460.0.ebuild
+      dev-perl/Sub-Exporter-ForMethods/Sub-Exporter-ForMethods-0.100.52.ebuild
+      dev-perl/namespace-autoclean/namespace-autoclean-0.280.0.ebuild
+      dev-perl/Test-CheckDeps/Test-CheckDeps-0.10.0.ebuild
+        dev-perl/CPAN-Meta-Check/CPAN-Meta-Check-0.13.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
