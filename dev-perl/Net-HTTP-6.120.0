@@ -1,0 +1,13 @@
+export BUG=605016
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=exp
+SOURCE=(
+  dev-perl/Net-HTTP/Net-HTTP-6.90.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Net-HTTP/Net-HTTP-6.120.0.ebuild
+    dev-perl/IO-Socket-INET6/IO-Socket-INET6-2.720.0.ebuild
+      dev-perl/Socket6/Socket6-0.270.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
