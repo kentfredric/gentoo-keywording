@@ -1,0 +1,12 @@
+export BUG=606156
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=exp
+SOURCE=(
+  dev-perl/Regexp-Common/Regexp-Common-2016020301.0.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Regexp-Common/Regexp-Common-2016060801.0.0.ebuild
+    dev-perl/Test-Regexp/Test-Regexp-2016060501.0.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
