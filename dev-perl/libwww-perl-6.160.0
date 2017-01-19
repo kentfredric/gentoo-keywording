@@ -1,0 +1,18 @@
+export BUG=606514
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=prefix
+export IGNORE_KEYWORDS="~arm-linux"
+SOURCE=(
+  dev-perl/libwww-perl/libwww-perl-6.150.0.ebuild
+)
+PACKAGES=(
+  dev-perl/libwww-perl/libwww-perl-6.160.0.ebuild
+    dev-perl/Test-RequiresInternet/Test-RequiresInternet-0.50.0.ebuild
+    dev-perl/Test-Fatal/Test-Fatal-0.14.0.ebuild
+      dev-perl/Try-Tiny/Try-Tiny-0.240.0.ebuild
+        dev-perl/Capture-Tiny/Capture-Tiny-0.420.0.ebuild
+        dev-perl/Sub-Name/Sub-Name-0.150.0.ebuild
+          dev-perl/Devel-CheckBin/Devel-CheckBin-0.40.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
