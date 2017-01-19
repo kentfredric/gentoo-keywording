@@ -1,0 +1,13 @@
+export BUG=606164
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=exp
+SOURCE=(
+  dev-perl/App-perlbrew/App-perlbrew-0.730.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/App-perlbrew/App-perlbrew-0.780.0.ebuild
+    dev-perl/CPAN-Perl-Releases/CPAN-Perl-Releases-3.0.0.ebuild
+    dev-perl/Devel-PatchPerl/Devel-PatchPerl-1.440.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
