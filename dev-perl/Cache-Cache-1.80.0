@@ -1,0 +1,12 @@
+export BUG=606914
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=prefix
+export IGNORE_KEYWORDS="~arm-linux"
+SOURCE=(
+  dev-perl/Cache-Cache/Cache-Cache-1.60.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Cache-Cache/Cache-Cache-1.80.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
