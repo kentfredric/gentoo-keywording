@@ -1,0 +1,13 @@
+export BUG=608170
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=stable
+export TEST_CHANGED=1
+#export IGNORE_KEYWORDS="~arm-linux"
+SOURCE=(
+  dev-perl/Net-SSLeay/Net-SSLeay-1.650.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Net-SSLeay/Net-SSLeay-1.800.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
