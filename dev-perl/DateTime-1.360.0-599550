@@ -1,0 +1,25 @@
+export BUG=599550
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=stable
+export TEST_CHANGED=1
+export IGNORE_KEYWORDS="alpha hppa"
+SOURCE=(
+  dev-perl/DateTime/DateTime-1.280.0.ebuild
+)
+PACKAGES=(
+  dev-perl/DateTime/DateTime-1.360.0.ebuild
+    dev-perl/Specio/Specio-0.350.0.ebuild
+      dev-perl/Ref-Util/Ref-Util-0.113.0.ebuild
+      dev-perl/Test-Needs/Test-Needs-0.2.2.ebuild
+      dev-perl/Eval-Closure/Eval-Closure-0.140.0.ebuild
+        dev-perl/Devel-LexAlias/Devel-LexAlias-0.50.0.ebuild
+          dev-perl/Devel-Caller/Devel-Caller-2.60.0.ebuild
+            dev-perl/PadWalker/PadWalker-2.200.0.ebuild
+        dev-perl/Perl-Tidy/Perl-Tidy-20160302.0.0.ebuild
+      dev-perl/Role-Tiny/Role-Tiny-2.0.5.ebuild
+    dev-perl/namespace-autoclean/namespace-autoclean-0.280.0.ebuild
+      dev-perl/Sub-Identify/Sub-Identify-0.120.0.ebuild
+    dev-perl/CPAN-Meta-Check/CPAN-Meta-Check-0.13.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
