@@ -1,0 +1,13 @@
+export BUG=609318
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=prefix
+SOURCE=(
+  dev-perl/Specio/Specio-0.320.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Specio/Specio-0.350.0.ebuild
+  dev-perl/Ref-Util/Ref-Util-0.113.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
+
