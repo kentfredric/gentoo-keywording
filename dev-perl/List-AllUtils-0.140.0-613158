@@ -1,0 +1,26 @@
+export BUG=613158
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/List-AllUtils/List-AllUtils-0.90.0.ebuild
+)
+PACKAGES=(
+  dev-perl/List-AllUtils/List-AllUtils-0.140.0.ebuild
+    dev-perl/List-SomeUtils/List-SomeUtils-0.530.0.ebuild
+      dev-perl/List-SomeUtils-XS/List-SomeUtils-XS-0.520.0.ebuild
+      dev-perl/Module-Implementation/Module-Implementation-0.90.0.ebuild
+        dev-perl/Module-Runtime/Module-Runtime-0.14.0.ebuild
+        dev-perl/Try-Tiny/Try-Tiny-0.240.0.ebuild
+          dev-perl/Capture-Tiny/Capture-Tiny-0.420.0.ebuild
+        dev-perl/Test-Requires/Test-Requires-0.100.0.ebuild
+        dev-perl/Test-Fatal/Test-Fatal-0.14.0.ebuild
+    dev-perl/List-UtilsBy/List-UtilsBy-0.100.0.ebuild
+#  dev-perl/Inline-C/Inline-C-0.760.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
