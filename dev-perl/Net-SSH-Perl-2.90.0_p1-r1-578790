@@ -1,0 +1,18 @@
+export BUG=578790
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Net-SSH-Perl/Net-SSH-Perl-1.360.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Net-SSH-Perl/Net-SSH-Perl-2.90.0_p1-r1.ebuild
+    dev-perl/Crypt-Curve25519/Crypt-Curve25519-0.50.0.ebuild
+    dev-perl/File-HomeDir/File-HomeDir-1.0.0-r1.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
