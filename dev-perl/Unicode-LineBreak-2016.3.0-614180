@@ -1,0 +1,21 @@
+export BUG=614180
+#export AUTOFIX=1
+#export ACTION=stablereq
+#export UPTO=exp
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  app-text/po4a/po4a-0.47.ebuild
+)
+PACKAGES=(
+  dev-perl/Unicode-LineBreak/Unicode-LineBreak-2016.3.0.ebuild
+    dev-perl/MIME-Charset/MIME-Charset-1.12.0.ebuild
+      dev-perl/Encode-EUCJPASCII/Encode-EUCJPASCII-0.30.0.ebuild
+      dev-perl/Encode-HanExtra/Encode-HanExtra-0.230.0-r1.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
