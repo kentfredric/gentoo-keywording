@@ -1,0 +1,20 @@
+export BUG=614470
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export IGNORE_KEYWORDS="arm64"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/B-Hooks-EndOfScope/B-Hooks-EndOfScope-0.150.0.ebuild
+)
+PACKAGES=(
+  dev-perl/B-Hooks-EndOfScope/B-Hooks-EndOfScope-0.200.0.ebuild
+    dev-perl/Variable-Magic/Variable-Magic-0.610.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
