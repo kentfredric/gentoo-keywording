@@ -1,0 +1,22 @@
+export BUG=614514
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Moo/Moo-2.0.2.ebuild
+)
+PACKAGES=(
+  dev-perl/Moo/Moo-2.3.0.ebuild
+    dev-perl/Role-Tiny/Role-Tiny-2.0.5.ebuild
+    dev-perl/Sub-Name/Sub-Name-0.150.0.ebuild
+      dev-perl/Devel-CheckBin/Devel-CheckBin-0.40.0.ebuild
+    dev-perl/Sub-Quote/Sub-Quote-2.3.1.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
