@@ -1,0 +1,19 @@
+export BUG=614754
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/File-ShareDir/File-ShareDir-1.30.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/File-ShareDir/File-ShareDir-1.102.0.ebuild
+    dev-perl/File-ShareDir-Install/File-ShareDir-Install-0.110.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
