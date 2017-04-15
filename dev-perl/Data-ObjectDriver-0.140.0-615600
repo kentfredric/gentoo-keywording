@@ -1,0 +1,23 @@
+export BUG=615600
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha arm hppa ia64 mips ppc ppc64 sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Data-ObjectDriver/Data-ObjectDriver-0.90.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Data-ObjectDriver/Data-ObjectDriver-0.140.0.ebuild
+    dev-perl/Module-Build-Tiny/Module-Build-Tiny-0.39.0.ebuild
+      dev-perl/ExtUtils-Config/ExtUtils-Config-0.8.0.ebuild
+      dev-perl/ExtUtils-Helpers/ExtUtils-Helpers-0.26.0.ebuild
+      dev-perl/ExtUtils-InstallPaths/ExtUtils-InstallPaths-0.11.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
