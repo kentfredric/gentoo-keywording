@@ -1,0 +1,31 @@
+export BUG=617120
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export WANT="amd64 hppa ppc ppc64 x86"
+#export WANT="amd64 x86"
+#export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha arm hppa ia64 mips ppc ppc64 sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Moose/Moose-2.160.500.ebuild
+)
+PACKAGES=(
+    dev-perl/Devel-OverloadInfo/Devel-OverloadInfo-0.4.0.ebuild
+    dev-perl/Module-Runtime-Conflicts/Module-Runtime-Conflicts-0.2.0.ebuild
+      dev-perl/Module-Build-Tiny/Module-Build-Tiny-0.39.0.ebuild
+        dev-perl/ExtUtils-Config/ExtUtils-Config-0.8.0.ebuild
+        dev-perl/ExtUtils-InstallPaths/ExtUtils-InstallPaths-0.11.0.ebuild
+        dev-perl/ExtUtils-Helpers/ExtUtils-Helpers-0.26.0.ebuild
+    dev-perl/CPAN-Meta-Check/CPAN-Meta-Check-0.13.0.ebuild
+    dev-perl/Test-CleanNamespaces/Test-CleanNamespaces-0.180.0.ebuild
+      dev-perl/File-Find-Rule-Perl/File-Find-Rule-Perl-1.150.0.ebuild # 30 days at 2017-05-05
+      dev-perl/Sub-Identify/Sub-Identify-0.140.0.ebuild               # 30 days at 2017-05-12
+      dev-perl/namespace-clean/namespace-clean-0.270.0.ebuild         # 30 days at 2017-05-05
+        dev-perl/B-Hooks-EndOfScope/B-Hooks-EndOfScope-0.200.0.ebuild
+          dev-perl/Variable-Magic/Variable-Magic-0.610.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
