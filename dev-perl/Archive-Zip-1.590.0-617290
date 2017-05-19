@@ -17,5 +17,6 @@ PACKAGES=(
   dev-perl/Archive-Zip/Archive-Zip-1.590.0.ebuild
     dev-perl/Test-MockModule/Test-MockModule-0.110.0.ebuild 
       dev-perl/SUPER/SUPER-1.201.411.170.ebuild
+        dev-perl/Sub-Identify/Sub-Identify-0.140.0.ebuild
 )
 perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
