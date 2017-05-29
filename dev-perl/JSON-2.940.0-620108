@@ -1,0 +1,23 @@
+export BUG=620108
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export WANT="amd64 hppa ppc ppc64 x86"
+#export WANT="amd64 x86"
+#export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha arm hppa ia64 mips ppc ppc64 sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/JSON/JSON-2.900.0.ebuild
+)
+PACKAGES=(
+  dev-perl/JSON/JSON-2.940.0.ebuild
+    dev-perl/JSON-XS/JSON-XS-3.30.0.ebuild
+      dev-perl/Types-Serialiser/Types-Serialiser-1.0.0.ebuild
+      dev-perl/common-sense/common-sense-3.740.0.ebuild
+      dev-perl/Canary-Stability/Canary-Stability-2011.0.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
