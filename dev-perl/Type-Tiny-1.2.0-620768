@@ -1,0 +1,23 @@
+export BUG=620768
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export WANT="amd64 hppa ppc ppc64 x86"
+#export WANT="amd64 x86"
+#export KEYWORDS="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sparc x86-fbsd"
+#export WANT="alpha arm hppa ia64 mips ppc ppc64 sparc x86-fbsd"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Type-Tiny/Type-Tiny-1.0.5.ebuild
+)
+PACKAGES=(
+  dev-perl/Type-Tiny/Type-Tiny-1.2.0.ebuild
+    dev-perl/Regexp-Util/Regexp-Util-0.3.0.ebuild
+    dev-perl/Type-Tie/Type-Tie-0.9.0.ebuild
+      dev-perl/Hash-FieldHash/Hash-FieldHash-0.150.0.ebuild
+    dev-perl/Type-Tiny-XS/Type-Tiny-XS-0.12.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
