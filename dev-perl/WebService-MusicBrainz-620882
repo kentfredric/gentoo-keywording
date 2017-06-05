@@ -1,0 +1,18 @@
+export BUG=620882
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/WebService-MusicBrainz/WebService-MusicBrainz-0.930.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/WebService-MusicBrainz/WebService-MusicBrainz-1.0.2.ebuild
+    dev-perl/Mojolicious/Mojolicious-7.320.0.ebuild
+      dev-perl/EV/EV-4.220.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
