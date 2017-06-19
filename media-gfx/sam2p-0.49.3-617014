@@ -1,0 +1,16 @@
+export BUG=617014
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  media-gfx/sam2p/sam2p-0.49.1.ebuild
+)
+PACKAGES=(
+  media-gfx/sam2p/sam2p-0.49.3.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
