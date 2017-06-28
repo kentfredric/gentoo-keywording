@@ -1,0 +1,16 @@
+export BUG=622952
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Gtk2-Notify/Gtk2-Notify-0.05-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Gtk2-Notify/Gtk2-Notify-0.50.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
