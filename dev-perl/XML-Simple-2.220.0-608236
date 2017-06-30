@@ -1,0 +1,18 @@
+export BUG=608236
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=prefix
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+export IGNORE_KEYWORDS="arm-linux"
+SOURCE=(
+  dev-perl/XML-Simple/XML-Simple-2.200.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/XML-Simple/XML-Simple-2.220.0.ebuild
+    dev-perl/XML-SAX-Expat/XML-SAX-Expat-0.510.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
