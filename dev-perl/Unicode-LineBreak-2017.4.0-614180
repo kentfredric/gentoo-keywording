@@ -10,11 +10,11 @@ export WANT="alpha amd64-fbsd arm64 arm hppa ia64 m68k mips ppc64 ppc s390 sh sp
 #export FIND_ADDS=1
 #export N_CHANGES=10
 SOURCE=(
-  app-text/po4a/po4a-0.47.ebuild
+  app-text/po4a/po4a-0.47-r1.ebuild
 )
 PACKAGES=(
-  dev-perl/Unicode-LineBreak/Unicode-LineBreak-2016.3.0.ebuild
-    dev-perl/MIME-Charset/MIME-Charset-1.12.0.ebuild
+  dev-perl/Unicode-LineBreak/Unicode-LineBreak-2017.4.0.ebuild
+    dev-perl/MIME-Charset/MIME-Charset-1.12.2.ebuild
       dev-perl/Encode-EUCJPASCII/Encode-EUCJPASCII-0.30.0.ebuild
       dev-perl/Encode-HanExtra/Encode-HanExtra-0.230.0-r1.ebuild
 )
