@@ -1,0 +1,18 @@
+export BUG=624824
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+#export IGNORE_KEYWORDS="arm-linux"
+SOURCE=(
+  dev-perl/Regexp-Common/Regexp-Common-2013031301.0.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Regexp-Common/Regexp-Common-2017060201.0.0.ebuild
+    dev-perl/Test-Regexp/Test-Regexp-2017040101.0.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
