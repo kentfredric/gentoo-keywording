@@ -31,4 +31,4 @@ my $target_file = "$cat/$pnv-$bug";
   }
 }
 system('git', '-C', MY_PWD, "add", $target_file );
-system('git','commit', '-m', "Add $cat/$pnv #$bug");
+system('git','commit', '-m', "Add $cat/$pnv #$bug\n\nBug: https://bugs.gentoo.org/$bug");
