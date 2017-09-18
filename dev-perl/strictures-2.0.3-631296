@@ -1,0 +1,21 @@
+export BUG=631296
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/strictures/strictures-2.0.1.ebuild
+)
+PACKAGES=(
+  dev-perl/strictures/strictures-2.0.3.ebuild
+    dev-perl/bareword-filehandles/bareword-filehandles-0.5.0.ebuild
+      dev-perl/B-Hooks-OP-Check/B-Hooks-OP-Check-0.210.0.ebuild
+      dev-perl/Lexical-SealRequireHints/Lexical-SealRequireHints-0.10.0.ebuild
+    dev-perl/indirect/indirect-0.360.0.ebuild
+    dev-perl/multidimensional/multidimensional-0.13.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
