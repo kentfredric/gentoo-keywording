@@ -1,0 +1,42 @@
+export BUG=630610
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-lang/perl/perl-5.24.1-r2.ebuild
+)
+PACKAGES=(
+  dev-lang/perl/perl-5.24.3.ebuild
+  virtual/perl-Archive-Tar/perl-Archive-Tar-2.40.100_rc-r4.ebuild
+  virtual/perl-bignum/perl-bignum-0.420.100_rc-r2.ebuild
+  virtual/perl-CPAN/perl-CPAN-2.110.100_rc-r4.ebuild
+  virtual/perl-Digest/perl-Digest-1.170.100_rc-r4.ebuild
+  virtual/perl-Digest-SHA/perl-Digest-SHA-5.950.100_rc-r4.ebuild
+  virtual/perl-Encode/perl-Encode-2.800.100_rc-r2.ebuild
+  virtual/perl-ExtUtils-MakeMaker/perl-ExtUtils-MakeMaker-7.100.200_rc-r2.ebuild
+  virtual/perl-File-Spec/perl-File-Spec-3.630.100_rc-r2.ebuild
+  virtual/perl-HTTP-Tiny/perl-HTTP-Tiny-0.56.1_rc-r2.ebuild
+  virtual/perl-IO-Compress/perl-IO-Compress-2.69.1_rc-r2.ebuild
+  virtual/perl-IO/perl-IO-1.360.100_rc-r2.ebuild
+  virtual/perl-IPC-Cmd/perl-IPC-Cmd-0.920.100_rc-r4.ebuild
+  virtual/perl-JSON-PP/perl-JSON-PP-2.273.0.100_rc-r4.ebuild
+  virtual/perl-libnet/perl-libnet-3.80.100_rc-r2.ebuild
+  virtual/perl-Locale-Maketext/perl-Locale-Maketext-1.260.100_rc-r4.ebuild
+  virtual/perl-Locale-Maketext-Simple/perl-Locale-Maketext-Simple-0.210.100_rc-r4.ebuild
+  virtual/perl-Memoize/perl-Memoize-1.30.100_rc-r4.ebuild
+  virtual/perl-Module-CoreList/perl-Module-CoreList-5.201.709.220-r1.ebuild
+  virtual/perl-Net-Ping/perl-Net-Ping-2.430.100_rc-r4.ebuild
+  virtual/perl-Parse-CPAN-Meta/perl-Parse-CPAN-Meta-1.441.700.100_rc-r2.ebuild
+  virtual/perl-Storable/perl-Storable-2.560.100_rc-r2.ebuild
+  virtual/perl-Sys-Syslog/perl-Sys-Syslog-0.330.100_rc-r4.ebuild
+  virtual/perl-Test-Harness/perl-Test-Harness-3.360.100_rc-r2.ebuild
+  virtual/perl-Test/perl-Test-1.280.100_rc-r2.ebuild
+  virtual/perl-Time-HiRes/perl-Time-HiRes-1.974.100-r1.ebuild
+  virtual/perl-XSLoader/perl-XSLoader-0.220.0-r2.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
