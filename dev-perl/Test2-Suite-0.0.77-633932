@@ -1,0 +1,23 @@
+export BUG=633932
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export EXTRA_KEYWORDS="sparc"
+export TEST_CHANGED=1
+#export KEYWORDS="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+export WANT="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Test2-Suite/Test2-Suite-0.0.77.ebuild
+)
+PACKAGES=(
+#  dev-perl/App-pwhich/App-pwhich-1.150.0.ebuild
+#    dev-perl/Test2-Suite/Test2-Suite-0.0.77.ebuild
+        dev-perl/Importer/Importer-0.24.0.ebuild
+        dev-perl/Sub-Info/Sub-Info-0.2.0.ebuild
+        dev-perl/Term-Table/Term-Table-0.8.0.ebuild 
+)
+
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
