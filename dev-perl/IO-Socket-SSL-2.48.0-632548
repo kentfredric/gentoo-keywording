@@ -1,0 +1,20 @@
+export BUG=632548
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export EXTRA_KEYWORDS="sparc"
+export TEST_CHANGED=1
+#export KEYWORDS="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+#export WANT="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+#export WANT="arm hppa ia64 ppc sparc"
+#export WANT="amd64 x86"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/IO-Socket-SSL/IO-Socket-SSL-2.24.0.ebuild
+)
+PACKAGES=(
+  dev-perl/IO-Socket-SSL/IO-Socket-SSL-2.48.0.ebuild
+)
+
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
