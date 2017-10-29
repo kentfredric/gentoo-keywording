@@ -12,7 +12,7 @@ SOURCE=(
 )
 PACKAGES=(
   dev-perl/Net-DNS/Net-DNS-1.100.0.ebuild
-    dev-perl/Digest-GOST/Digest-GOST-0.60.0.ebuild
+    dev-perl/Digest-GOST/Digest-GOST-0.60.0-r1.ebuild
     dev-perl/Net-DNS-SEC/Net-DNS-SEC-1.20.0.ebuild
       dev-perl/Crypt-OpenSSL-DSA/Crypt-OpenSSL-DSA-0.190.0.ebuild
     dev-perl/Digest-BubbleBabble/Digest-BubbleBabble-0.20.0-r1.ebuild
