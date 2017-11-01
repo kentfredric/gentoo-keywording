@@ -1,0 +1,21 @@
+export BUG=636126
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export EXTRA_KEYWORDS="sparc"
+export TEST_CHANGED=1
+#export KEYWORDS="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+#export WANT="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Mail-DKIM/Mail-DKIM-0.410.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Mail-DKIM/Mail-DKIM-0.440.0.ebuild
+    dev-perl/Net-DNS-Resolver-Mock/Net-DNS-Resolver-Mock-1.201.710.310.ebuild
+    dev-perl/YAML-LibYAML/YAML-LibYAML-0.650.0.ebuild
+)
+
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
