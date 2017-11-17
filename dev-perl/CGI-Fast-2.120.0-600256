@@ -1,0 +1,20 @@
+export BUG=600256
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=exp
+#export EXTRA_KEYWORDS="sparc"
+export TEST_CHANGED=1
+#export KEYWORDS="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+#export WANT="alpha arm arm64 hppa ia64 ppc ppc64 sparc x86-fbsd"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/CGI-Fast/CGI-Fast-2.100.0.ebuild
+)
+PACKAGES=(
+  dev-perl/CGI-Fast/CGI-Fast-2.120.0.ebuild
+    dev-perl/FCGI/FCGI-0.780.0.ebuild
+)
+
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
