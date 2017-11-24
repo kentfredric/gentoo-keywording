@@ -3,6 +3,7 @@ export BUG=622992
 export ACTION=stablereq
 export UPTO=dev
 export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
 #export KEYWORDS="amd64"
 #export WANT="arm hppa ia64 ppc sparc"
 #export FIND_ADDS=1
