@@ -1,0 +1,24 @@
+export BUG=639714
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=exp
+export TEST_CHANGED=1
+#export EXTRA_KEYWORDS="sparc"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Net-DNS/Net-DNS-1.40.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Net-DNS/Net-DNS-1.130.0.ebuild
+    dev-perl/Net-LibIDN2/Net-LibIDN2-1.0.0.ebuild
+      net-dns/libidn2/libidn2-2.0.4.ebuild
+        dev-libs/libunistring/libunistring-0.9.7.ebuild
+    dev-perl/Digest-BubbleBabble/Digest-BubbleBabble-0.20.0-r1.ebuild
+    dev-perl/Net-DNS-SEC/Net-DNS-SEC-1.20.0.ebuild
+      dev-perl/Crypt-OpenSSL-DSA/Crypt-OpenSSL-DSA-0.190.0.ebuild
+        dev-libs/libressl/libressl-2.6.3-r2.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
