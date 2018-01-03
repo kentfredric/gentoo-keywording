@@ -1,0 +1,17 @@
+export BUG=643248
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/IO-Pager/IO-Pager-0.350.0.ebuild
+)
+PACKAGES=(
+  dev-perl/IO-Pager/IO-Pager-0.390.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
