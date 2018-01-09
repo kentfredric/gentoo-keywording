@@ -1,0 +1,21 @@
+export BUG=643980
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=exp
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+#export IGNORE_KEYWORDS="m68k sh s390"
+export WANT="alpha amd64 arm hppa ia64 ppc ppc64 x86 arm64 x86-fbsd sparc"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Specio/Specio-0.420.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Sub-Quote/Sub-Quote-2.3.1.ebuild
+  dev-perl/Ref-Util/Ref-Util-0.203.0.ebuild
+    dev-perl/Ref-Util-XS/Ref-Util-XS-0.116.0.ebuild
+  #dev-perl/Specio/Specio-0.420.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
