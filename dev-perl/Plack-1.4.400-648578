@@ -1,0 +1,25 @@
+export BUG=648578
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+#export IGNORE_KEYWORDS="m68k sh s390"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Plack/Plack-1.3.900.ebuild
+)
+PACKAGES=(
+  dev-perl/Plack/Plack-1.4.400.ebuild
+    dev-perl/Cookie-Baker/Cookie-Baker-0.80.0.ebuild
+      dev-perl/Cookie-Baker-XS/Cookie-Baker-XS-0.80.0.ebuild
+    dev-perl/HTTP-Entity-Parser/HTTP-Entity-Parser-0.200.0.ebuild
+      dev-perl/HTTP-MultiPartParser/HTTP-MultiPartParser-0.20.0.ebuild
+    dev-perl/WWW-Form-UrlEncoded/WWW-Form-UrlEncoded-0.240.0.ebuild
+      dev-perl/WWW-Form-UrlEncoded-XS/WWW-Form-UrlEncoded-XS-0.240.0.ebuild
+    dev-perl/Test-MockTime-HiRes/Test-MockTime-HiRes-0.70.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
