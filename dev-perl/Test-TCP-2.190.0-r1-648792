@@ -1,0 +1,18 @@
+export BUG=648792
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+#export IGNORE_KEYWORDS="m68k sh s390"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Test-TCP/Test-TCP-2.60.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Test-TCP/Test-TCP-2.190.0-r1.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
