@@ -1,0 +1,19 @@
+export BUG=650956
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=prefix
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+export IGNORE_KEYWORDS="arm-linux"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/URI/URI-1.710.0.ebuild
+)
+PACKAGES=(
+  dev-perl/URI/URI-1.730.0.ebuild
+    dev-perl/Test-Needs/Test-Needs-0.2.5.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
