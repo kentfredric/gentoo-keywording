@@ -1,0 +1,21 @@
+export BUG=652308
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+export IGNORE_KEYWORDS="arm-linux"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/App-perlbrew/App-perlbrew-0.780.0.ebuild
+)
+PACKAGES=(
+  dev-perl/App-perlbrew/App-perlbrew-0.820.0.ebuild
+    dev-perl/CPAN-Perl-Releases/CPAN-Perl-Releases-3.380.0.ebuild
+    dev-perl/File-Which/File-Which-1.220.0.ebuild
+      dev-perl/App-pwhich/App-pwhich-1.140.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
