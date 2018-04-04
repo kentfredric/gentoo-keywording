@@ -1,0 +1,19 @@
+export BUG=652468
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+export IGNORE_KEYWORDS="arm-linux"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Authen-Radius/Authen-Radius-0.220.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Authen-Radius/Authen-Radius-0.260.0.ebuild
+    dev-perl/Data-HexDump/Data-HexDump-0.20.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
