@@ -1,0 +1,18 @@
+export BUG=652542
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+export IGNORE_KEYWORDS="arm-linux"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Class-Mix/Class-Mix-0.5.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Class-Mix/Class-Mix-0.6.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
