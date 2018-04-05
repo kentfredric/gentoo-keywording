@@ -1,0 +1,21 @@
+export BUG=652576
+#export AUTOFIX=1
+#export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+export IGNORE_KEYWORDS="arm-linux"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Crypt-DES/Crypt-DES-2.70.0.ebuild
+)
+PACKAGES=(
+  dev-perl/Crypt-DES/Crypt-DES-2.70.0-r1.ebuild
+    dev-perl/Crypt-CBC/Crypt-CBC-2.330.0-r1.ebuild
+      dev-perl/Crypt-Blowfish/Crypt-Blowfish-2.140.0-r1.ebuild
+      dev-perl/Crypt-IDEA/Crypt-IDEA-1.100.0.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
