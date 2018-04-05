@@ -1,0 +1,19 @@
+export BUG=652540
+#export AUTOFIX=1
+export ACTION=stablereq
+export UPTO=dev
+export TEST_CHANGED=1
+export EXTRA_KEYWORDS="sparc"
+export IGNORE_KEYWORDS="arm-linux"
+#export KEYWORDS="amd64"
+#export WANT="arm hppa ia64 ppc sparc"
+#export FIND_ADDS=1
+#export N_CHANGES=10
+SOURCE=(
+  dev-perl/Class-Load-XS/Class-Load-XS-0.60.0-r1.ebuild
+)
+PACKAGES=(
+  dev-perl/Class-Load-XS/Class-Load-XS-0.100.0.ebuild
+    dev-perl/Test-Needs/Test-Needs-0.2.5.ebuild
+)
+perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
