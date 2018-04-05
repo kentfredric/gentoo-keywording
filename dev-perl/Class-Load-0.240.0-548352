@@ -16,6 +16,6 @@ PACKAGES=(
       dev-perl/Dist-CheckConflicts/Dist-CheckConflicts-0.110.0.ebuild
       dev-perl/Package-Stash-XS/Package-Stash-XS-0.280.0.ebuild
       dev-perl/Test-Requires/Test-Requires-0.100.0.ebuild
-    dev-perl/Test-Needs/Test-Needs-0.2.2.ebuild
+    dev-perl/Test-Needs/Test-Needs-0.2.5.ebuild
 )
 perl missing_keywords.pl "${SOURCE[0]}" "${PACKAGES[@]}"
